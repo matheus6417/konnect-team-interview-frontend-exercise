@@ -42,5 +42,6 @@ module.exports = {
     'vue/attributes-order': ['error', {
       alphabetical: true,
     }],
+    'vue/multi-word-component-names': 'off',
   },
 }

@@ -1,11 +1,19 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import router from './router'
+import type { UserModule } from './types'
+import generatedRoutes from '~pages'
+import 'uno.css'
 
-const app = createApp(App)
+import './styles/style.scss'
 
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+const routes = generatedRoutes
+export const apiUrl = 'http://localhost:3000'
+export const createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  (ctx) => {
+    // install all modules under `modules/`
+    Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))
+      .forEach(i => i.install?.(ctx))
+  },
+)

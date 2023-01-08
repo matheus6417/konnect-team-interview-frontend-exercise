@@ -1,4 +1,4 @@
-import { ref, onBeforeMount } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import axios from 'axios'
 
 // This composable is a simplified example for the exercise.
