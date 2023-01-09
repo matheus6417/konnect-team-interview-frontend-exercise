@@ -2,10 +2,6 @@
   "name": "konnect-team-interview-frontend-exercise",
   "version": "0.0.0-development",
   "description": "Konnect Team Interview Frontend Exercise",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kong/konnect-team-interview-frontend-exercise.git"
-  },
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -34,7 +30,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.0.28",
     "unocss": "^0.48.0",
-    "vue-demi": "^0.13.11", 
+    "vue-demi": "^0.13.11",
     "vue-router": "^4.1.6",
     "vue": "^3.2.45"
   },

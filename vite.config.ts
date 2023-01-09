@@ -1,6 +1,5 @@
 /// <reference types="vitest" />
-
-import { fileURLToPath, URL } from 'url'
+import path from 'path'
 import dns from 'dns'
 import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -40,10 +39,7 @@ export default defineConfig({
         '@vueuse/core',
       ],
       dts: 'src/auto-imports.d.ts',
-      dirs: [
-        'src/composables',
-        'src/stores',
-      ],
+      dirs: ['src/composables', 'src/stores'],
       vueTemplate: true,
     }),
 
@@ -52,16 +48,13 @@ export default defineConfig({
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue'],
       // include files from any folder under `src/components/`
-      dirs: [
-        'src/components',
-        'src/components/*',
-      ],
+      dirs: ['src/components', 'src/components/*'],
       dts: 'src/components.d.ts',
     }),
   ],
   resolve: {
     alias: {
-      '@/': fileURLToPath(new URL('./src/', import.meta.url)),
+      '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
   server: {
