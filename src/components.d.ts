@@ -7,8 +7,18 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AvatarIcon: typeof import('./components/icons/AvatarIcon.vue')['default']
+    copy: typeof import('./components/icons/OrganizationIcon copy.vue')['default']
+    LogoIcon: typeof import('./components/icons/LogoIcon.vue')['default']
+    NavigationMenu: typeof import('./components/header/NavigationMenu.vue')['default']
+    OrganizationIcon: typeof import('./components/icons/OrganizationIcon.vue')['default']
+    ProfileMenu: typeof import('./components/header/ProfileMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ServiceCatalog: typeof import('./components/ServiceCatalog.vue')['default']
+    SettingsIcon: typeof import('./components/icons/SettingsIcon.vue')['default']
+    TheButton: typeof import('./components/common/TheButton.vue')['default']
+    TopBar: typeof import('./components/header/TopBar.vue')['default']
+    UserAvatar: typeof import('./components/profile/UserAvatar.vue')['default']
   }
 }
