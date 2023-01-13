@@ -6,15 +6,19 @@
 
 Implemented features (besides exercise requirements), and items that were mentioned in Panel 1 interview
 
-- File based routing
 - Persistency between pages (going back from a service, keeps last page view, search term)
 - Search debounced to avoid several api calls
 - Loading skeleton components
 - UI feedback for loading, empty, error
 - Pagination behaviour (reseting on search, loading state)
-- Card is not clicable - only title and versions button (as mentioned, we could have multiple actions in one card)
+- Card is not clicable - only title and versions button (as mentioned, we could have multiple actions in one card, like, clicking on a developer avatar)
 - Styles mainly in sass
 - Not used any kong components - added generic components (button, input) with enough props and features for the assignment.
+- Server endpoint for fetching a single service by id
+- Truncating card descriptions, formatting service metrics.
+- File based routing
+- Used script setup and Auto-import of components and main vue & vueUse api - keeping better readability
+- No media queries for responsive behaviour - used flexbox, grid layout and container queries
 
 ### ❌ Items NOT implemented (from Panel 1 discussion)
 
@@ -31,11 +35,40 @@ Items nice-to-have but not implemented due limited time:
 - Breadcrumbs
 - "New Service" popup/sidepanel
 - Search cache
+- Search input validation (min length, etc)
 - e2e tests
+- Animation & transitions of cards, and navigation
+- better mobile version for top-bar with hamburguer menu
 
-### 📌 Considerations
+### 📌 Considerations & Trade-offs
 
-// TODO:
+1. Started the assignment collecting assets and defining the main styles for the app, considering that I would not use Kong design assets/components.
+    
+However I noticed that the figma design had some inconsistencies, so for each one I hade to make a decision:
+
+Ideally I would have asked for clarification, and exchange feedback with the Designer, push to document and use the shared design system and values. For this exercise I decided to go with my best judgement, as follows:
+
+- Spacing: Usually I expect that the spacing goes by multiple of a base even unit (8px, 16px, 24px, etc). In the design, there were some cases where the spacing was something unique, or odd. I decided to use the closest value multiple of the base unit I defined as 16px.
+- Fonts: The mock had a lot of different font sizes, (10,12,13,14,15,16,20px...) I decided to use the closest range of fonts possible to keep the consistency.
+- Colors: The mock had a lot of different similar colors, more than the present on kong design assets. I decided to use the closest range of colors possible to keep the consistency.
+- I extracted the figma icons and created single components with custom props. Ideally we would have a shared set of icons with customizations capabilities.
+- I didn't understand how the Version HTTP/REST flag would work on the the app, because it looks like a button/clicable tag, so I just rendered it as is using the service provided data.
+
+Some issues with the figma were found, like:
+- overflowing elements:
+//TODO: ADD SCREENSHOT
+- elements leaking outside of the figma frame:
+//TODO: ADD SCREENSHOT
+
+
+2. The google doc [requirements gathering](https://docs.google.com/document/d/1AIXTtrEMZBnfoLYXDlBYiEB-BTk7XNt2QlY7jWYdPv0/edit#) has some wording inconsistency with the README requirements:
+
+- In docs, If not configured, show ‘Is Pending’ - In FIGMA we only have UI for 'In progress'. I decided to use 'In progress'.
+- In docs, the main page primary button is called "Create Service Package", in FIGMA is '+ Service Package'. I've used '+ Service Package'
+
+
+3. The server didn't provide an endpoint for fetching a single service, so I implemented one.
+
 
 ---
 
