@@ -1,10 +1,15 @@
 <template>
-  <h2 p-3>
-    Nothing Here!
-  </h2>
+  <EmptyState
+    @empty:clicked="$router.back()"
+  >
+    <template #title>
+      Nothing to see here!
+    </template>
+    <template #message>
+      We couldn't find the page you were looking for.
+    </template>
+    <template #cta>
+      Go Back
+    </template>
+  </EmptyState>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: 404
-</route>
