@@ -1461,6 +1461,23 @@
     "@unhead/ssr" "^1.0.9"
     "@unhead/vue" "^1.0.9"
 
+"@vueuse/integrations@^9.10.0":
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/integrations/-/integrations-9.10.0.tgz#853214eb2cd8c3bde7429c8cae36fa65b22997fa"
+  integrity sha512-MLGVbN3i9gRq3pb8VRZXgPvbNJcUUvgR5pmbc1QZj4Z1vvsvxam159AwWEJdyX2I39a1E7EkmBujtiXtVckO5g==
+  dependencies:
+    "@vueuse/core" "9.10.0"
+    "@vueuse/shared" "9.10.0"
+    vue-demi "*"
+
+"@vueuse/math@^9.10.0":
+  version "9.10.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/math/-/math-9.10.0.tgz#163b84bbfe997f256aa28a97286eeb7fea78d2a4"
+  integrity sha512-DvCyQFhXToPgZzSs841TCylIVwuab5gNErjdFCNWX3vs+T3rC8wMnlaBCYTXb5g4ruqm6K/hBnHyalRnCj/VbQ==
+  dependencies:
+    "@vueuse/shared" "9.10.0"
+    vue-demi "*"
+
 "@vueuse/metadata@9.10.0":
   version "9.10.0"
   resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-9.10.0.tgz#1a5eb94ca755bd8e666505f47da7d88969cffdc7"

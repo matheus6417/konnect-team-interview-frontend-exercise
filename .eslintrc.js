@@ -36,12 +36,13 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always',
     }],
-    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/func-call-spacing': ['error', 'never'],
     'vue/attributes-order': ['error', {
       alphabetical: true,
     }],
     'vue/multi-word-component-names': 'off',
+    'no-undef': 'off',
   },
 }
