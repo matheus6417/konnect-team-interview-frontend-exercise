@@ -1,6 +1,6 @@
 <template>
   <svg
-    fill="currentColor"
+    :fill="color"
     height="20"
     title="Organization"
     width="20"
@@ -12,3 +12,11 @@
     />
   </svg>
 </template>
+<script setup lang="ts">
+defineProps({
+  color: {
+    type: String,
+    default: 'currentColor',
+  },
+})
+</script>
