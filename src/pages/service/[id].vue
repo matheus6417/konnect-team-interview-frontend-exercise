@@ -16,7 +16,7 @@
     </EmptyState>
   </div>
   <section
-    v-if="service"
+    v-else-if="service"
     class="service-layout"
   >
     <PageHeader>
@@ -40,7 +40,7 @@
       </template>
       <template #actions>
         <TheButton disabled>
-          Edit
+          Edit Service
         </TheButton>
       </template>
     </PageHeader>
@@ -63,14 +63,14 @@
           :metrics="service.metrics"
         />
       </section>
-      <section>
+      <section v-if="getContributors?.length">
         <h3 mb-3>
           Contributors
         </h3>
-        <AvatarList :users="getUsersFromServiceVersions(service.versions)" />
+        <AvatarList :users="getContributors" />
       </section>
     </div>
-    <section>
+    <section v-if="service.versions?.length">
       <h4>Versions ({{ service.versions.length }})</h4>
       <ServiceVersionsList
         :service-type="service.type"
@@ -96,6 +96,11 @@ const {
 onBeforeMount(() => {
   const fromStore = servicesStore.getServiceById(`${route.params.id}`)
   isUndefined(fromStore) ? fetchService() : (service.value = fromStore)
+})
+
+const getContributors = computed(() => {
+  if (!service.value?.versions) return
+  return getUsersFromServiceVersions(service.value.versions)
 })
 </script>
 

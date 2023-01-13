@@ -3,7 +3,6 @@
     fill="none"
     :height="height"
     title="logo"
-    :width="width"
     v-bind="$attrs"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -54,10 +53,6 @@ defineProps({
   height: {
     type: String,
     default: '26',
-  },
-  width: {
-    type: String,
-    default: 'min-content',
   },
   compact: {
     type: Boolean,

@@ -81,7 +81,7 @@ const {
   execute: fetchServices,
   error,
   isLoading,
-} = useApi.services.list(searchTerm.value) // FIXME: this is not reactive
+} = useApi.services.list(searchTerm.value)
 
 onBeforeMount(() => {
   if (services.value.length === 0) {
@@ -93,10 +93,13 @@ const newService = () => {
   alert('new service')
 }
 
-watch(isFinished, () => servicesStore.setServices(data.value))
+watch(isFinished, () => {
+  if (!data.value) return
+  servicesStore.setServices(data.value)
+})
 
 const search = async () => {
-  await fetchServices(`/services${searchTerm.value ? `?q=${searchTerm.value}` : ''}`) // FIXME
+  await fetchServices(`/services${searchTerm.value ? `?q=${searchTerm.value}` : ''}`)
 }
 
 const DEBOUNCE_WAIT_MS = 600

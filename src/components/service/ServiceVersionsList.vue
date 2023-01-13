@@ -116,7 +116,7 @@ defineProps({
   line-height: 20px;
   padding: 0 0.4rem;
   color: $blue-400;
-  background: $blue-200;
+  background: $blue-100;
   border-radius: 4px;
   opacity: 0.9;
   vertical-align: middle;

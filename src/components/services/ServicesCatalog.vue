@@ -13,7 +13,6 @@
         description,
         versions,
       } in services"
-      :id="id"
       :key="id"
     >
       <template #header>
