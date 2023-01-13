@@ -1,0 +1,21 @@
+h1 {
+  font-weight: 700;
+  font-size: $font-xxl-size;
+  line-height: 36px;
+  color: #3c4557;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3c4557;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/*# sourceMappingURL=..\..\..\..\..\..\gh\konnect-team-interview-frontend-exercise\src\styles\typography.css.map */

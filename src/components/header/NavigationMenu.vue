@@ -58,8 +58,8 @@ defineProps({
   gap: 0.75rem;
   padding-inline: 1rem;
   border-radius: 0.5rem;
-  color: #ffffff;
-  font-size: 15px;
+  color: $white;
+  font-size: $font-md-size;
   line-height: 18px;
   text-decoration: none;
   transition: $transition-default;

@@ -1,16 +1,12 @@
 <template>
   <div class="layout">
     <TopBar class="header" />
-    <main>
+    <main class="p-10 container">
       <RouterView />
     </main>
   </div>
 </template>
-<style lang="scss">
-body {
-  max-width: 1440px !important; // TODO: REMOVE
-  margin-inline: auto !important;
-}
+<style scoped lang="scss">
 .layout {
   height: 100vh;
   display: grid;

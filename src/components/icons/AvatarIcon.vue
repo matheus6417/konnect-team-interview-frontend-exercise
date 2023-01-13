@@ -1,6 +1,5 @@
 <template>
   <svg
-    fill="#0A7FAE"
     height="30"
     title="User Avatar"
     width="30"
@@ -16,3 +15,9 @@
     />
   </svg>
 </template>
+<style scoped lang="scss">
+@import '@/styles/variables.scss';
+svg {
+  fill: $teal-400;
+}
+</style>
