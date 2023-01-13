@@ -1,22 +1,27 @@
-import type { Service } from './response/Service'
+import type { Service } from '@/api/response'
+import axios, { AxiosResponse } from 'axios'
+import { useAxios, StrictUseAxiosReturn } from '@vueuse/integrations/useAxios'
 
-const client = {
-  get: async (endpoint: string) => {
-    const res = await fetch(`${endpoint}`)
-    return res.json()
-  },
+type apiReturn<T> = StrictUseAxiosReturn<T, AxiosResponse<T>, unknown>
+
+const instance = axios.create({
+  baseURL: '/api',
+})
+
+const client = (endpoint: string) => {
+  return useAxios(endpoint, instance, { immediate: false })
 }
 
-export interface IApi {
+interface Api {
   services: {
-    list: () => Promise<Service[]>
-    get: (id: string) => Promise<Service>
+    list: (query?: string) => apiReturn<Service[]>
+    get: (id: string) => apiReturn<Service>
   }
 }
 
-export const api: IApi = {
+export const useApi: Api = {
   services: {
-    list: () => client.get('/api/services'),
-    get: (id: string) => client.get(`/api/service/${id}`),
+    list: (query?: string) => client(`/services${query ? `?q=${query}` : ''}`),
+    get: (id: string) => client(`/service/${id}`),
   },
 }

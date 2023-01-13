@@ -1,11 +1,5 @@
 import * as T from 'io-ts'
-
-const DeveloperDecoder = T.type({
-  id: T.string,
-  name: T.string,
-  email: T.string,
-  avatar: T.string,
-})
+import { UserDecoder } from './User'
 
 export const VersionDecoder = T.intersection([
   T.type({
@@ -15,7 +9,7 @@ export const VersionDecoder = T.intersection([
     updated_at: T.string,
   }),
   T.partial({
-    developer: DeveloperDecoder,
+    developer: UserDecoder,
   }),
 ])
 
