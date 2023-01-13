@@ -1,4 +1,45 @@
-# Welcome
+### Screen Record
+
+[konnect-team-interview-frontend.webm](https://user-images.githubusercontent.com/20672249/212342023-13b1c586-e7ae-42fe-9b8b-2ea2cf2b5fae.webm)
+
+### ✨ Main Features 
+
+Implemented features (besides exercise requirements), and items that were mentioned in Panel 1 interview
+
+- File based routing
+- Persistency between pages (going back from a service, keeps last page view, search term)
+- Search debounced to avoid several api calls
+- Loading skeleton components
+- UI feedback for loading, empty, error
+- Pagination behaviour (reseting on search, loading state)
+- Card is not clicable - only title and versions button (as mentioned, we could have multiple actions in one card)
+- Styles mainly in sass
+- Not used any kong components - added generic components (button, input) with enough props and features for the assignment.
+
+### ❌ Items NOT implemented (from Panel 1 discussion)
+
+Items that were not required:
+
+- i18n internationalization
+- Accessibility coverage
+- Main page URL query search
+- Offline capabilities
+
+Items nice-to-have but not implemented due limited time:
+
+- Keyboard navigation
+- Breadcrumbs
+- "New Service" popup/sidepanel
+- Search cache
+- e2e tests
+
+### 📌 Considerations
+
+// TODO:
+
+---
+
+# Original Assignment README:
 
 Please take the time to read through all of the sections below; we want you to do great! :rocket:
 
