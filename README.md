@@ -17,8 +17,9 @@ Implemented features (besides exercise requirements), and items that were mentio
 - Server endpoint for fetching a single service by id
 - Truncating card descriptions, formatting service metrics.
 - File based routing
-- Used script setup and Auto-import of components and main vue & vueUse api - keeping better readability
-- No media queries for responsive behaviour - used flexbox, grid layout and container queries
+- Used script setup and Auto-import of components and main vue & vueUse api - keeping better readability.
+- No media queries for responsive behaviour - used flexbox, grid layout and container queries - so the components have more flexibility of positioning.
+- Typescript validation with io-ts
 
 ### ❌ Items NOT implemented (from Panel 1 discussion)
 
@@ -56,9 +57,14 @@ Ideally I would have asked for clarification, and exchange feedback with the Des
 
 Some issues with the figma were found, like:
 - overflowing elements:
-//TODO: ADD SCREENSHOT
+
+![image](https://user-images.githubusercontent.com/20672249/212356726-271eab61-d81e-49e6-8c3a-df6f0068d676.png)
+
 - elements leaking outside of the figma frame:
-//TODO: ADD SCREENSHOT
+
+![image](https://user-images.githubusercontent.com/20672249/212356883-7bf5ec2d-b2f5-4ac9-a0a4-8cb09df996ee.png)
+
+![image](https://user-images.githubusercontent.com/20672249/212356967-d0dc68df-9a4b-451c-9da3-94a06ba33af9.png)
 
 
 2. The google doc [requirements gathering](https://docs.google.com/document/d/1AIXTtrEMZBnfoLYXDlBYiEB-BTk7XNt2QlY7jWYdPv0/edit#) has some wording inconsistency with the README requirements:
